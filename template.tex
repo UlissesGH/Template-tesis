@@ -1,0 +1,68 @@
+\documentclass[twoside,12pt]{Latex/Classes/PhDthesisPSnPDF}
+\usepackage{blindtext}
+\usepackage{float}	
+\usepackage{hyperref} 
+\usepackage{soul}
+\usepackage[dvipsnames]{xcolor}
+\include{Latex/Macros/MacroFile1}    
+
+\title{\large{título}}
+
+\author{autor}
+\degree{grado}             
+\director{asesor}
+\degreedate{2023}                           
+\lugar{ lugar }                       
+\portadatrue          
+
+\keywords{}       
+\subject{}           %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\maketitle									
+
+\frontmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   ÍNDICES                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{secnumdepth}{3} %
+\setcounter{tocdepth}{3}    % print table of contents for level 3
+\tableofcontents            % Genera el índice 
+%: ----------------------- list of figures/tables ------------------------
+%\listoffigures             % Genera el ínidce de figuras
+%\listoftables               % Genera índice de tablas
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   CONTENIDO                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+\def\baselinestretch{1.5}                   
+\include{Chapter1/Preliminares}
+\include{Chapter2/Axiomas}    
+\include{Chapter3/Definiciones}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   APÉNDICES                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\appendix
+%\include{Apendice1/Apendice1}              
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   REFERENCIAS                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% existen varios estilos de bilbiografía, pueden cambiarlos a placer
+\bibliographystyle{apalike}% otros estilos pueden ser abbrv, acm, alpha, apalike, ieeetr, plain, siam, unsrt
+
+%\bibliographystyle{Latex/Classes/PhDbiblio-case} % title forced lower case
+%\bibliographystyle{Latex/Classes/PhDbiblio-bold} % title as in bibtex but bold
+%\bibliographystyle{Latex/Classes/PhDbiblio-url} % bold + www link if provided
+%\bibliographystyle{Latex/Classes/jmb} % calls style file jmb.bst
+
+\nocite{*}
+\bibliography{ref}             % Archivo .bib
+
+
+
+\end{document}
